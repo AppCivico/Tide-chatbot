@@ -19,8 +19,8 @@ const googleMapsClient = require('@google/maps').createClient({
 
 const mapPageToAccessToken = async (pageId) => {
 	const perfilData = await FrontAPI.getPoliticianData(pageId);
-	return "EAAN02lTmwtwBAO2IWIdFRNGT4KZBR8QXCnyU8ppqFSIXhthqTRGsZCIkLhupKd2ZCY65ZCoT2TnZBxjesdV6RiBAZBoeYlL3VWl4dgmBgod8UkfuogViVL2iXJ6zDZBfNMZBx5RriPEL4EnvRJAWCGSx0cN32prqOUFT7af8f0wnpgZDZD";
-	// return perfilData.fb_access_token;
+	return config.accessToken;
+	// return perfilData.fb_access_token ? perfilData.fb_access_token : process.env.ACCESS_TOKEN;
 };
 
 const bot = new MessengerBot({
