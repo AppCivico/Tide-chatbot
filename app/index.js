@@ -32,7 +32,7 @@ const bot = new MessengerBot({
 
 bot.setInitialState({});
 
-// bot.use(withTyping({ delay: 1000 * 2 }));
+bot.use(withTyping({ delay: 1000 * 2 }));
 
 async function waitTypingEffect(context) {
 	await context.typingOn();
